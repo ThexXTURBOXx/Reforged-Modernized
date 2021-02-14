@@ -12,12 +12,13 @@
     "Sunconure11"
   ],
   "contact": {
-    "homepage": "https://nmexis.me/",
-    "sources": "https://github.com/ThexXTURBOXx/Reforged-Fabric"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/reforged",
+    "sources": "https://github.com/ThexXTURBOXx/Reforged-Modernized",
+    "issues": "https://github.com/ThexXTURBOXx/Reforged-Modernized/issues"
   },
 
   "license": "GNU-GPL-v3",
-  "icon": "assets/reforged/icon.png",
+  "icon": "icon.png",
 
   "environment": "*",
   "entrypoints": {

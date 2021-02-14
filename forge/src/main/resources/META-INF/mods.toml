@@ -11,23 +11,24 @@ authors = "HyperSpeeed, Silvercatcher, SnowballFlame, Sunconure11"
 description = '''
 This mod is a rewrite of Reforged, which is a Rewrite of Balkon's Weapons mod, for modern versions of Minecraft.
 '''
-logoFile = "assets/reforged/icon.png"
+logoFile = "icon.png"
+updateJSONURL = "https://raw.githubusercontent.com/ThexXTURBOXx/UpdateJSONs/master/reforged.json"
 
-[[dependencies.examplemod]]
+[[dependencies.reforged]]
 modId = "forge"
 mandatory = true
 versionRange = "[35,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.reforged]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.16.2,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.reforged]]
 modId = "architectury"
 mandatory = true
 versionRange = "[1.1.55,)"
