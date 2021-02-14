@@ -10,14 +10,17 @@ jobs:
   build:
     strategy:
       matrix:
-        # Use these Java versions
+        # Use these Java versions (Only 1.8 should be sufficient for now)
         java: [
-          1.8,  # Minimum supported by Minecraft
-          11,   # Current Java LTS
-          15    # Latest version
+          1.8 #,  # Minimum supported by Minecraft
+          #11,    # Current Java LTS
+          #15     # Latest version
         ]
-        # and run on both Linux and Windows
-        os: [ubuntu-20.04, windows-latest]
+        # and run on both Linux and Windows (Only Linux sufficient for now...)
+        os: [
+          ubuntu-20.04 #,
+          #windows-latest
+        ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout repository
@@ -29,15 +32,15 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: make gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
+        #if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew build
       - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '1.8' }} # Only upload artifacts built from Java 8 on one OS
+        #if: ${{ runner.os == 'Linux' && matrix.java == '1.8' }} # Only upload artifacts built from Java 8 on one OS
         uses: actions/upload-artifact@v2
         with:
-          name: Fabric Artifacts
+          name: Artifacts
           path: |
             fabric/build/libs
             forge/build/libs
