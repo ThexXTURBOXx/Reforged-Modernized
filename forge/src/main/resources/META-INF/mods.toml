@@ -1,17 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[35,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://github.com/ThexXTURBOXx/Reforged-Modernized/issues"
+license = "GNU-GPL-v3"
 
 [[mods]]
-modId = "examplemod"
+modId = "reforged"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Reforged"
+authors = "HyperSpeeed, Silvercatcher, SnowballFlame, Sunconure11"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+This mod is a rewrite of Reforged, which is a Rewrite of Balkon's Weapons mod, for modern versions of Minecraft.
 '''
-#logoFile = ""
+logoFile = "assets/reforged/icon.png"
 
 [[dependencies.examplemod]]
 modId = "forge"

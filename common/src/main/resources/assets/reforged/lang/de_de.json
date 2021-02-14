@@ -1,0 +1,18 @@
+{
+  "itemGroup.reforged.items": "Reforged",
+
+  "item.reforged.battle_axe_wood": "Holzstreitaxt",
+  "item.reforged.battle_axe_stone": "Steinstreitaxt",
+  "item.reforged.battle_axe_gold": "Goldstreitaxt",
+  "item.reforged.battle_axe_iron": "Eisenstreitaxt",
+  "item.reforged.battle_axe_diamond": "Diamantstreitaxt",
+  "item.reforged.battle_axe_netherite": "Netheritstreitaxt",
+
+  "attribute.reforged.ignore_armor": "Durchdrinung",
+  "attribute.reforged.knockback": "Rückstoß",
+  "attribute.reforged.reload_time": "Nachladedauer",
+  "attribute.reforged.reach": "Reichweite",
+
+  "death.attack.battle_axe": "%1$s wurde von %2$s totgeschlagen",
+  "death.attack.battle_axe.item": "%1$s wurde von %2$s mit %3$s totgeschlagen"
+}

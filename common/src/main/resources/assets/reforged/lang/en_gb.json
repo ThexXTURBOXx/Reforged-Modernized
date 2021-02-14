@@ -1,0 +1,18 @@
+{
+  "itemGroup.reforged.items": "Reforged",
+
+  "item.reforged.battle_axe_wood": "Wooden Battleaxe",
+  "item.reforged.battle_axe_stone": "Stone Battleaxe",
+  "item.reforged.battle_axe_gold": "Golden Battleaxe",
+  "item.reforged.battle_axe_iron": "Iron Battleaxe",
+  "item.reforged.battle_axe_diamond": "Diamond Battleaxe",
+  "item.reforged.battle_axe_netherite": "Netherite Battleaxe",
+
+  "attribute.reforged.ignore_armor": "Penetration",
+  "attribute.reforged.knockback": "Knockback",
+  "attribute.reforged.reload_time": "Reloading time",
+  "attribute.reforged.reach": "Reach",
+
+  "death.attack.battle_axe": "%1$s was struck dead by %2$s",
+  "death.attack.battle_axe.item": "%1$s was struck dead by %2$s using %3$s"
+}

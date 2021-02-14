@@ -1,31 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "reforged",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+
+  "name": "Reforged",
+  "description": "This mod is a rewrite of Reforged, which is a Rewrite of Balkon's Weapons mod, for modern versions of Minecraft.",
   "authors": [
-    "Me!"
+    "HyperSpeeed",
+    "Silvercatcher",
+    "SnowballFlame",
+    "Sunconure11"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://nmexis.me/",
+    "sources": "https://github.com/ThexXTURBOXx/Reforged-Fabric"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+
+  "license": "GNU-GPL-v3",
+  "icon": "assets/reforged/icon.png",
+
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "de.femtopedia.reforged.fabric.ReforgedModFabric"
     ]
   },
+
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": ">=1.16.4",
     "architectury": ">=1.1.55"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }

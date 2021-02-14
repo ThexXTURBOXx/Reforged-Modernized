@@ -1,0 +1,6 @@
+{
+  "parent": "reforged:item/battle_axe",
+  "textures": {
+    "layer0": "reforged:item/battle_axe_wood"
+  }
+}
