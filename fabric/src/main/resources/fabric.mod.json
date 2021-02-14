@@ -32,5 +32,15 @@
     "fabric": "*",
     "minecraft": ">=1.16.4",
     "architectury": ">=1.1.55"
+  },
+  "suggests": {
+    "modupdater": ">=1.1.5"
+  },
+
+  "custom": {
+    "modupdater": {
+      "strategy": "json",
+      "url": "https://raw.githubusercontent.com/ThexXTURBOXx/UpdateJSONs/master/reforged-fabric.json"
+    }
   }
 }
