@@ -1,7 +1,7 @@
 package de.femtopedia.reforged.forge;
 
 import de.femtopedia.reforged.ReforgedMod;
-import me.shedaniel.architectury.platform.forge.EventBuses;
+import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

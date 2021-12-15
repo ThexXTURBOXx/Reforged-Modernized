@@ -1,10 +1,10 @@
 package de.femtopedia.reforged.api;
 
 import de.femtopedia.reforged.item.ItemBattleaxe;
+import dev.architectury.registry.CreativeTabRegistry;
+import dev.architectury.registry.registries.DeferredRegister;
+import dev.architectury.registry.registries.RegistrySupplier;
 import java.util.UUID;
-import me.shedaniel.architectury.registry.CreativeTabs;
-import me.shedaniel.architectury.registry.DeferredRegister;
-import me.shedaniel.architectury.registry.RegistrySupplier;
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.item.Item;
@@ -67,7 +67,7 @@ public class ReforgedRegistry {
     // ================================================== CREATIVE TAB =================================================
 
     public static final ItemGroup REFORGED_ITEM_GROUP =
-            CreativeTabs.create(new Identifier(MOD_ID, "items"), () -> new ItemStack(BATTLE_AXE_IRON.get()));
+            CreativeTabRegistry.create(new Identifier(MOD_ID, "items"), () -> new ItemStack(BATTLE_AXE_IRON.get()));
 
     public static void init() {
         ITEMS.register();
