@@ -10,14 +10,11 @@ jobs:
   build:
     strategy:
       matrix:
-        # Use these Java versions (Only 1.8 should be sufficient for now)
         java: [
-          16      # Latest version
+          17
         ]
-        # and run on both Linux and Windows (Only Linux sufficient for now...)
         os: [
-          ubuntu-20.04 #,
-          #windows-latest
+          ubuntu-20.04
         ]
     runs-on: ${{ matrix.os }}
     steps:
@@ -35,7 +32,6 @@ jobs:
       - name: build
         run: ./gradlew build
       - name: capture build artifacts
-        #if: ${{ runner.os == 'Linux' && matrix.java == '1.8' }} # Only upload artifacts built from Java 8 on one OS
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts

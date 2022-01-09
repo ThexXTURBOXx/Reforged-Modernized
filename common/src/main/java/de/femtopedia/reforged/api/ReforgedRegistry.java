@@ -1,6 +1,6 @@
 package de.femtopedia.reforged.api;
 
-import de.femtopedia.reforged.item.ItemBattleaxe;
+import de.femtopedia.reforged.item.BattleaxeItem;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -47,22 +47,22 @@ public class ReforgedRegistry {
     // ===================================================== ITEMS =====================================================
 
     public static final RegistrySupplier<Item> BATTLE_AXE_WOOD = ITEMS.register("battle_axe_wood",
-            () -> new ItemBattleaxe(ToolMaterials.WOOD, 1));
+            () -> new BattleaxeItem(ToolMaterials.WOOD, 1));
 
     public static final RegistrySupplier<Item> BATTLE_AXE_STONE = ITEMS.register("battle_axe_stone",
-            () -> new ItemBattleaxe(ToolMaterials.STONE, 1));
+            () -> new BattleaxeItem(ToolMaterials.STONE, 1));
 
     public static final RegistrySupplier<Item> BATTLE_AXE_IRON = ITEMS.register("battle_axe_iron",
-            () -> new ItemBattleaxe(ToolMaterials.IRON, 1));
+            () -> new BattleaxeItem(ToolMaterials.IRON, 1));
 
     public static final RegistrySupplier<Item> BATTLE_AXE_DIAMOND = ITEMS.register("battle_axe_diamond",
-            () -> new ItemBattleaxe(ToolMaterials.DIAMOND, 1));
+            () -> new BattleaxeItem(ToolMaterials.DIAMOND, 1));
 
     public static final RegistrySupplier<Item> BATTLE_AXE_GOLD = ITEMS.register("battle_axe_gold",
-            () -> new ItemBattleaxe(ToolMaterials.GOLD, 1));
+            () -> new BattleaxeItem(ToolMaterials.GOLD, 1));
 
     public static final RegistrySupplier<Item> BATTLE_AXE_NETHERITE = ITEMS.register("battle_axe_netherite",
-            () -> new ItemBattleaxe(ToolMaterials.NETHERITE, 1));
+            () -> new BattleaxeItem(ToolMaterials.NETHERITE, 1));
 
     // ================================================== CREATIVE TAB =================================================
 

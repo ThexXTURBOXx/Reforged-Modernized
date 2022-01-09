@@ -17,7 +17,7 @@ import net.minecraft.item.Vanishable;
 
 import static de.femtopedia.reforged.api.ReforgedRegistry.IGNORE_ARMOR_DAMAGE_ID;
 
-public class ItemBattleaxe extends AxeItem implements Vanishable {
+public class BattleaxeItem extends AxeItem implements Vanishable {
 
     private static final float BASE_DAMAGE = 3;
     private static final float BASE_SPEED = -3;
@@ -26,7 +26,7 @@ public class ItemBattleaxe extends AxeItem implements Vanishable {
 
     private final float ignoreArmor;
 
-    public ItemBattleaxe(ToolMaterial material, float ignoreArmor) {
+    public BattleaxeItem(ToolMaterial material, float ignoreArmor) {
         super(material, BASE_DAMAGE, BASE_SPEED, new ReforgedProperties());
 
         this.ignoreArmor = ignoreArmor;

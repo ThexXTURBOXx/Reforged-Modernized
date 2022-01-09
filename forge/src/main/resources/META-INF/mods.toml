@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[35,)"
+loaderVersion = "[39,)"
 issueTrackerURL = "https://github.com/ThexXTURBOXx/Reforged-Modernized/issues"
 license = "GNU-GPL-v3"
 
@@ -17,20 +17,20 @@ updateJSONURL = "https://raw.githubusercontent.com/ThexXTURBOXx/UpdateJSONs/mast
 [[dependencies.reforged]]
 modId = "forge"
 mandatory = true
-versionRange = "[35,)"
+versionRange = "[39,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.reforged]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.16.2,)"
+versionRange = "[1.18.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.reforged]]
 modId = "architectury"
 mandatory = true
-versionRange = "[1.1.55,)"
+versionRange = "[3.2.57,)"
 ordering = "AFTER"
 side = "BOTH"
