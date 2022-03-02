@@ -8,6 +8,13 @@
   "item.reforged.battle_axe_diamond": "Diamantstreitaxt",
   "item.reforged.battle_axe_netherite": "Netheritstreitaxt",
 
+  "item.reforged.boomerang_wood": "Holzbumerang",
+  "item.reforged.boomerang_stone": "Steinbumerang",
+  "item.reforged.boomerang_gold": "Goldbumerang",
+  "item.reforged.boomerang_iron": "Eisenbumerang",
+  "item.reforged.boomerang_diamond": "Diamantbumerang",
+  "item.reforged.boomerang_netherite": "Netheritbumerang",
+
   "attribute.reforged.ignore_armor": "Durchdringung",
   "attribute.reforged.knockback": "Rückstoß",
   "attribute.reforged.reload_time": "Nachladedauer",

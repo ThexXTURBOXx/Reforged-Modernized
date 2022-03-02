@@ -8,6 +8,13 @@
   "item.reforged.battle_axe_diamond": "Diamond Battleaxe",
   "item.reforged.battle_axe_netherite": "Netherite Battleaxe",
 
+  "item.reforged.boomerang_wood": "Wooden Boomerang",
+  "item.reforged.boomerang_stone": "Stone Boomerang",
+  "item.reforged.boomerang_gold": "Golden Boomerang",
+  "item.reforged.boomerang_iron": "Iron Boomerang",
+  "item.reforged.boomerang_diamond": "Diamond Boomerang",
+  "item.reforged.boomerang_netherite": "Netherite Boomerang",
+
   "attribute.reforged.ignore_armor": "Penetration",
   "attribute.reforged.knockback": "Knockback",
   "attribute.reforged.reload_time": "Reloading time",

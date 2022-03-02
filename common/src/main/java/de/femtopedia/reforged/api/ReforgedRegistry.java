@@ -1,15 +1,24 @@
 package de.femtopedia.reforged.api;
 
+import de.femtopedia.reforged.client.renderers.BoomerangEntityRenderer;
+import de.femtopedia.reforged.entity.BoomerangEntity;
 import de.femtopedia.reforged.item.BattleaxeItem;
+import de.femtopedia.reforged.item.BoomerangItem;
 import dev.architectury.registry.CreativeTabRegistry;
+import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -21,6 +30,9 @@ public class ReforgedRegistry {
     // =================================================== REGISTRIES ==================================================
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, Registry.ITEM_KEY);
+
+    public static final DeferredRegister<EntityType<?>> ENTITIES =
+            DeferredRegister.create(MOD_ID, Registry.ENTITY_TYPE_KEY);
 
     // =================================================== ATTRIBUTES ==================================================
 
@@ -44,33 +56,55 @@ public class ReforgedRegistry {
     public static final EntityAttribute WEAPON_REACH =
             new ClampedEntityAttribute("attribute.reforged.reach", 0D, 0D, Double.MAX_VALUE);
 
+    // ==================================================== ENTITIES ===================================================
+
+    public static final RegistrySupplier<EntityType<BoomerangEntity>> BOOMERANG_ENTITY =
+            ENTITIES.register("boomerang_entity", () -> EntityType.Builder.create(
+                    BoomerangEntity::create, SpawnGroup.MISC).build("boomerang_entity"));
+
     // ===================================================== ITEMS =====================================================
 
-    public static final RegistrySupplier<Item> BATTLE_AXE_WOOD = ITEMS.register("battle_axe_wood",
-            () -> new BattleaxeItem(ToolMaterials.WOOD, 1));
+    public static final Map<ToolMaterial, RegistrySupplier<BattleaxeItem>> BATTLE_AXES = new HashMap<>();
 
-    public static final RegistrySupplier<Item> BATTLE_AXE_STONE = ITEMS.register("battle_axe_stone",
-            () -> new BattleaxeItem(ToolMaterials.STONE, 1));
-
-    public static final RegistrySupplier<Item> BATTLE_AXE_IRON = ITEMS.register("battle_axe_iron",
-            () -> new BattleaxeItem(ToolMaterials.IRON, 1));
-
-    public static final RegistrySupplier<Item> BATTLE_AXE_DIAMOND = ITEMS.register("battle_axe_diamond",
-            () -> new BattleaxeItem(ToolMaterials.DIAMOND, 1));
-
-    public static final RegistrySupplier<Item> BATTLE_AXE_GOLD = ITEMS.register("battle_axe_gold",
-            () -> new BattleaxeItem(ToolMaterials.GOLD, 1));
-
-    public static final RegistrySupplier<Item> BATTLE_AXE_NETHERITE = ITEMS.register("battle_axe_netherite",
-            () -> new BattleaxeItem(ToolMaterials.NETHERITE, 1));
+    public static final Map<ToolMaterial, RegistrySupplier<BoomerangItem>> BOOMERANGS = new HashMap<>();
 
     // ================================================== CREATIVE TAB =================================================
 
-    public static final ItemGroup REFORGED_ITEM_GROUP =
-            CreativeTabRegistry.create(new Identifier(MOD_ID, "items"), () -> new ItemStack(BATTLE_AXE_IRON.get()));
+    public static final ItemGroup REFORGED_ITEM_GROUP = CreativeTabRegistry.create(new Identifier(MOD_ID, "items"),
+            () -> new ItemStack(BATTLE_AXES.get(ToolMaterials.IRON).get()));
+
+    public static void registerBattleAxe(MaterialApi.MaterialData data) {
+        BATTLE_AXES.put(data.material(), ITEMS.register("battle_axe_" + data.key(),
+                () -> new BattleaxeItem(data.material(), 1)));
+    }
+
+    public static void registerBoomerang(MaterialApi.MaterialData data) {
+        BOOMERANGS.put(data.material(), ITEMS.register("boomerang_" + data.key(),
+                () -> new BoomerangItem(data.material())));
+    }
+
+    private static void registerItems() {
+        for (MaterialApi.MaterialData data : MaterialApi.getRegisteredMaterials()) {
+            registerBattleAxe(data);
+        }
+        for (MaterialApi.MaterialData data : MaterialApi.getRegisteredMaterials()) {
+            registerBoomerang(data);
+        }
+    }
+
+    private static void finalizeRegistries() {
+        ITEMS.register();
+        ENTITIES.register();
+    }
+
+    private static void registerRenderers() {
+        EntityRendererRegistry.register(BOOMERANG_ENTITY::get, BoomerangEntityRenderer::new);
+    }
 
     public static void init() {
-        ITEMS.register();
+        registerItems();
+        finalizeRegistries();
+        registerRenderers();
     }
 
 }
