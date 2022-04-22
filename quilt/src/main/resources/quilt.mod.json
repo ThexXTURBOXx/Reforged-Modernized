@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "reforged",
+    "version": "${version}",
+    "name": "Reforged",
+    "description": "This mod is a rewrite of Reforged, which is a Rewrite of Balkon's Weapons mod, for modern versions of Minecraft.",
+    "authors": [
+      "HyperSpeeed",
+      "Silvercatcher",
+      "SnowballFlame",
+      "Sunconure11"
+    ],
+    "contact": {
+      "homepage": "https://www.curseforge.com/minecraft/mc-mods/reforged",
+      "sources": "https://github.com/ThexXTURBOXx/Reforged-Modernized",
+      "issues": "https://github.com/ThexXTURBOXx/Reforged-Modernized/issues"
+    },
+    "license": "GNU-GPL-v3",
+    "icon": "icon.png",
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "environment": "*",
+    "entrypoints": {
+      "init": [
+        "de.femtopedia.reforged.quilt.ReforgedModQuilt"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.18.2"
+      },
+      {
+        "id": "architectury",
+        "version": ">=4.2.50"
+      }
+    ]
+  }
+}

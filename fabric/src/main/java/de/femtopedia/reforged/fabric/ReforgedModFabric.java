@@ -1,13 +1,13 @@
 package de.femtopedia.reforged.fabric;
 
-import de.femtopedia.reforged.ReforgedMod;
+import de.femtopedia.reforged.fabriclike.ReforgedModFabricLike;
 import net.fabricmc.api.ModInitializer;
 
 public class ReforgedModFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ReforgedMod.init();
+        ReforgedModFabricLike.init();
     }
 
 }
